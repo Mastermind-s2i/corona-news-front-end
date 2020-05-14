@@ -3,49 +3,83 @@
   <head>
     <meta charset="utf-8">
     <title>CoronaNews. Anti-vius site</title>
-    <!-- Integrazione fogli di stile -->
+    <!-- Integrazione foglio di stile -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Link icone Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Link integrazione Google Font Roboto Slab -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
-  </head>
+    <link href="/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
+   </head>
   <body>
     <header>
       <!-- Logo del sito -->
-      <img src="img/logo.jpg" alt="Logo del sito" class="logo">
+      <span id="logo"><strong>CoronaNews.</strong></span>
       <!-- Link per apertura menu' (visibile solo su mobile) -->
       <a href="javascript:void(0);" id="icona" onclick="aperturaMenu()">
         <i class="fa fa-bars"></i>
       </a>
       <!-- Menu link del sito -->
       <div id="header-right">
-        <a id="menu-link" class="active" href="#home">Home</a>
-        <a id="menu-link" href="#contact">Contatti</a>
-        <a id="menu-link" href="#about">About</a>
-        <a id="menu-link" href="#login">Accedi</a>
-        <a id="menu-link" href="#signup">Registrati</a>
+        <a class="menu-link" class="active" href="#home" target="_blank">Home</a>
+        <a class="menu-link" href="chi-siamo.html" target="_blank">Chi siamo</a>
+        <a class="menu-link" href="contatti.html" target="_blank">Contatti</a>
+        <a class="menu-link" href="#accedi">Accedi</a>
       </div>
     </header>
 
     <main>
       <!-- Sezione principale del sito contenente le ultime notizie -->
       <div class="titolo">
-        <h1>ULTIME NOTIZIE</h1>
+        <p>ULTIME NOTIZIE</p>
       </div>
+
+      <section>
+        <!-- Container del slideshow -->
+        <div class="in-primo-piano">
+
+         <!-- Contenitore singola immagine con numero e didascalia -->
+         <div class="immagine fade">
+           <img src="img/slide-img-example-1.jpg" id="img1">
+           <div class="didascalia">Caption Text</div>
+         </div>
+
+         <div class="immagine fade">
+           <img src="img/slide-img-example-2.jpg" id="img2">
+           <div class="didascalia">Caption Two</div>
+         </div>
+
+         <div class="immagine fade">
+           <img src="img/slide-img-example-3.jpg" id="img3">
+           <div class="didascalia">Caption Three</div>
+         </div>
+
+         <!-- Buttons precedente e successivo -->
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- Puntini -->
+        <div style="text-align:center">
+         <span class="dot" onclick="currentSlide(1)"></span>
+         <span class="dot" onclick="currentSlide(2)"></span>
+         <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
 
       <div class="main-container">
         <section>
           <!-- Articolo 1 -->
           <article>
             <!-- Contenitore per l'immagine -->
-            <div class="immagine">
+            <div class="img">
               <img src="img/esempio.jpg" alt="Immagine per l'articolo" class="img-articolo">
             </div>
             <!-- Contenitore per i meta dati dell'articolo -->
             <div class="articolo">
               <div class="titolo-articolo">
-                <strong><a href="#">Titolo dell'articolo 1</a></strong> 
+                <strong><a href="#">Titolo dell'articolo 1</a></strong>
               </div>
               <p>
                 <span>Scritto da Autore &nbsp;&nbsp;</span>
@@ -59,7 +93,7 @@
           <!-- Articolo 2 -->
           <article>
             <!-- Contenitore per l'immagine -->
-            <div class="immagine">
+            <div class="img">
               <img src="img/esempio.jpg" alt="Immagine per l'articolo" class="img-articolo">
             </div>
             <!-- Contenitore per i meta dati dell'articolo -->
@@ -79,7 +113,7 @@
           <!-- Articolo 3 -->
           <article>
             <!-- Contenitore per l'immagine -->
-            <div class="immagine">
+            <div class="img">
               <img src="img/esempio.jpg" alt="Immagine per l'articolo" class="img-articolo">
             </div>
             <!-- Contenitore per i meta dati dell'articolo -->
@@ -97,13 +131,71 @@
           </article>
         </section>
 
+        <!-- Sidebar -->
         <aside>
-          <h2>SIDEBAR</h2>
+          <h2>MAPPA DEI CONTAGI</h2>
+          <img src="img/mappa-covid.png" alt="Mappa Covid-19 Italia" id="mappa">
         </aside>
       </div>
+
+      <!-- Newsletter -->
+      <section class="newsletter">
+        <form action="action_page.php">
+         <div class="container">
+           <h2>Rimani sempre aggiornato!</h2>
+           <p>Iscriviti alla nostra newsletter, ti terremo aggiornato sulle news che più ti interessano.</p>
+         </div>
+
+         <div class="container">
+           <input type="text" placeholder="Nome" name="name" required>
+           <input type="text" placeholder="Indirizzo email" name="mail" required>
+           <label>
+             <input type="checkbox" checked="checked" name="subscribe"> Ho letto e accettato l'Informativa sulla Privacy
+           </label>
+         </div>
+
+         <div class="container">
+           <input type="submit" value="Sottoscrivi">
+         </div>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <!-- Mappa del sito -->
+        <div class="left-footer">
+          <h3>Mappa del sito</h3>
+          <ul class="sitemap">
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="#">Contatti</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <!-- Link social con Font Awesome -->
+        <div class="right-footer">
+          <h3>Seguici sui social</h3>
+        </div>
+        <div class="icone">
+          <div class="icona-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+          <div class="icona-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="icona-social">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Torna sopra -->
+      <a href="#"></a>
     </main>
 
     <!-- Integrazione file js -->
     <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/slideshow.js"></script>
   </body>
 </html>

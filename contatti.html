@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CoronaNews. Anti-vius site</title>
+    <!-- Integrazione foglio di stile -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link icone Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link integrazione Google Font Roboto Slab -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
+   </head>
+  <body>
+    <header>
+      <!-- Logo del sito -->
+      <span id="logo"><strong>CoronaNews.</strong></span>
+      <!-- Link per apertura menu' (visibile solo su mobile) -->
+      <a href="javascript:void(0);" id="icona" onclick="aperturaMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!-- Menu link del sito -->
+      <div id="header-right">
+        <a class="menu-link" class="active" href="homepage.html" target="_blank">Home</a>
+        <a class="menu-link" href="chi-siamo.html" target="_blank">Chi siamo</a>
+        <a class="menu-link" href="contatti.html" target="_blank">Contatti</a>
+        <a class="menu-link" href="#accedi">Accedi</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sezione principale del sito contenente le ultime notizie -->
+      <h1><strong>CONTATTI</strong></h1>
+
+      <section id="contatti">
+        <div class="contenitore-input">
+          <div class="contenitore-grid">
+            <label for="">Nome
+              <input class="input" type="text">
+            </label>
+            <label for="">Cognome
+              <input class="input" type="text">
+            </label>
+            
+            <label for="">Oggetto
+              <input class="input" type="text">
+            </label>
+            
+            <label for="">E-mail
+              <input class="input" type="text">
+            </label>
+          </div>
+          <label for="">Messaggio</label>
+          <textarea class="input"></textarea>
+          <div class="submit">
+            <label for="">
+              <input type="checkbox">Ho letto e accettato l'Informativa sulla Privacy
+            </label>
+            <button class="invia" type="submit">Invia</button>
+          </div>
+        </div>   
+      </section>
+
+      <!-- Newsletter -->
+      <section class="newsletter">
+        <form action="action_page.php">
+         <div class="container">
+           <h2>Rimani sempre aggiornato!</h2>
+           <p>Iscriviti alla nostra newsletter, ti terremo aggiornato sulle news che più ti interessano.</p>
+         </div>
+
+         <div class="container">
+           <input type="text" placeholder="Nome" name="name" required>
+           <input type="text" placeholder="Indirizzo email" name="mail" required>
+           <label>
+             <input type="checkbox" checked="checked" name="subscribe"> Ho letto e accettato l'Informativa sulla Privacy
+           </label>
+         </div>
+
+         <div class="container">
+           <input type="submit" value="Sottoscrivi">
+         </div>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="left-footer">
+          <h3>Mappa del sito</h3>
+          <ul class="sitemap">
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="#">Contatti</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="right-footer">
+          <h3>Seguici sui social</h3>
+        </div>
+        <div class="icone">
+          <div class="icona-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+          <div class="icona-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="icona-social">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Torna sopra -->
+      <a href="#"></a>
+    </main>
+
+    <!-- Integrazione file js -->
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/slideshow.js"></script>
+  </body>
+</html>
