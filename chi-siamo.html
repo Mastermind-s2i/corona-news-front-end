@@ -21,10 +21,39 @@
       </a>
       <!-- Menu link del sito -->
       <div id="header-right">
-        <a class="menu-link" class="active" href="homepage.html" target="_blank">Home</a>
-        <a class="menu-link" href="chisiamo.html" target="_blank">Chi siamo</a>
-        <a class="menu-link" href="contatti.html" target="_blank">Contatti</a>
-        <a class="menu-link" href="#accedi">Accedi</a>
+        <a class="menu-link" class="active" href="#home">Home</a>
+        <a class="menu-link" href="chi-siamo.html">Chi siamo</a>
+        <a class="menu-link" href="contatti.html">Contatti</a>
+        <a class="menu-link" onclick="document.getElementById('accedi').style.display='block'">Accedi</a>
+      </div>
+      <!-- Modal per accedere all'area membri -->
+      <div id="accedi" class="modal">
+        <span onclick="document.getElementById('accedi').style.display='none'" class="chiusura" title="Chiudi">&times;</span>
+        
+        <!-- Contenuto del modal -->
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <img src="img/user.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="container">
+            <label for="username"><strong>Username</strong></label>
+            <input type="text" placeholder="Inserisci il tuo username" name="username" required>
+
+            <label for="password"><strong>Password</strong></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Accedi</button>
+            <label>
+              <input type="checkbox" checked="checked" name="ricordami"><span style="color: black;">Ricordami</span>
+            </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1;">
+            <div class="password">Hai dimenticato la tua <a href="#" class="modal-link">password</a>?</div>
+            <div class="registrati">Non sei ancora iscritto? Registrati <a href="#" class="modal-link">qui</a>!</div>
+          </div>
+        </form>
       </div>
     </header>
 
